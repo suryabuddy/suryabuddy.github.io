@@ -1,2 +1,2 @@
 # suryabuddy.github.io
-I surya - computer teacher . founder of study helpline
+Iam Surya - computer teacher,founder of study helpline

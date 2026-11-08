@@ -164,30 +164,80 @@ alert("Coupon Code: "+c);
 <h2>📢 Ad Video - Rajasthan CET 2026 - LearnNity</h2>
 <video controls width="100%" src="WhatsApp Video 2026-11-08 at 1.26.18 PM.mp4"></video>
 </div>
-  <div class="card" style="text-align:center; border:2px solid #FF6A00;">
-<h2>📚 Rajasthan GK - Full PDF Unlock</h2>
-<p>Full PDF paane ke liye pehle Form bharo, Code milega.</p>
-<a href="https://forms.gle/fZG3cn27Dh9GGAFw6" target="_blank" style="display:inline-block; background:#FF6A00; color:#fff; padding:12px 20px; border-radius:25px; font-weight:bold; text-decoration:none;">📝 Form Bharo - Code Paao</a>
-<br><br>
-<input type="text" id="unlockCode" placeholder="Yaha Code Daalo - surya2026" style="padding:12px; width:80%; max-width:300px; border-radius:10px; border:1px solid #ccc; text-align:center;">
-<br><br>
-<button onclick="checkCode()" style="background:#000; color:#fff; padding:12px 25px; border-radius:25px; font-weight:bold; border:none;">🔓 PDF Unlock Karo</button>
-<p id="msg" style="color:red; font-weight:bold;"></p>
-<div id="pdfBox" style="display:none;">
-<a href="Rajasthan.pdf" target="_blank" style="display:inline-block; background:green; color:#fff; padding:12px 20px; border-radius:25px; font-weight:bold; text-decoration:none;">📥 Full PDF Download Karo</a>
+  <!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learnity.in - Rajasthan GK Poster</title>
+<style>
+body{font-family:Arial; margin:0; background:#FFF7ED; text-align:center;}
+.header{background:#000; color:#fff; padding:15px; font-size:22px; font-weight:bold;}
+.header span{color:#FF6A00;}
+.box{max-width:800px; margin:15px auto; background:#fff; border-radius:15px; padding:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+.poster-wrap{position:relative; border-radius:15px; overflow:hidden; border:3px solid #FF6A00;}
+.poster-wrap img{width:100%; display:block;}
+#lockCover{position:absolute; bottom:0; left:0; width:100%; height:48%; background:rgba(0,0,0,0.55); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); display:flex; flex-direction:column; justify-content:center; align-items:center; color:white;}
+.lock-icon{background:#FFC107; width:75px; height:75px; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:38px; border:3px solid white;}
+input{padding:13px; width:80%; max-width:320px; border-radius:10px; border:1px solid #ccc; text-align:center; font-size:16px;}
+.btn{background:#000; color:#fff; padding:13px 28px; border-radius:25px; font-weight:bold; border:none; font-size:16px; margin-top:12px;}
+.btn-green{background:#16A34A; color:#fff; padding:15px 25px; border-radius:25px; font-weight:bold; text-decoration:none; display:inline-block; font-size:17px; margin-top:15px;}
+</style>
+</head>
+<body>
+
+<div class="header">Learnity<span>.in</span></div>
+
+<div class="box">
+<h2 style="margin:5px 0;">📚 Rajasthan GK - Full Poster</h2>
+<p style="color:#666; margin:5px 0 15px 0;">Poster dekhne ke liye Code dalo</p>
+
+<div class="poster-wrap">
+<img src="lockpdf.jpeg">
+<div id="lockCover">
+<div class="lock-icon">🔒</div>
+<h2 style="margin:10px 0 5px 0;">FULL POSTER LOCKED</h2>
+<p style="color:#FFE9B0; font-weight:bold; margin:0; padding:0 10px;">Unlock karne ke liye neeche Coupon Code dalo</p>
 </div>
 </div>
+
+<div style="margin-top:20px;">
+<input type="text" id="myCode" placeholder="Yaha Code Daalo">
+<br>
+<button class="btn" onclick="unlockNow()">🔓 Poster + PDF Unlock Karo</button>
+<p id="msg" style="font-weight:bold; color:red;"></p>
+
+<div id="downloadArea" style="display:none;">
+<p style="color:green; font-weight:bold;">✅ Unlock Ho Gaya Bhai!</p>
+<a class="btn-green" href="Rajasthan.pdf" download>📥 Full PDF Download Karo</a>
+<br><br>
+<p style="font-size:13px; color:#666;">Form nahi bhara? Pehle Form bharo, fir Code milega.</p>
+</div>
+</div>
+</div>
+
+<div class="box" style="background:#FFF1DC;">
+<h3>📝 Form Bharo - Code Paao</h3>
+<p>Code ke liye Form bharna zaroori hai</p>
+<a href="https://forms.gle/" target="_blank" style="background:#FF6A00; color:#fff; padding:12px 25px; border-radius:25px; text-decoration:none; font-weight:bold; display:inline-block;">Form Bharo</a>
+<p style="font-size:13px; color:#666; margin-top:10px;">Form bharne ke baad Code milega</p>
+</div>
+
 <script>
-function checkCode(){
-var c = document.getElementById("unlockCode").value.trim();
+function unlockNow(){
+var c = document.getElementById("myCode").value.trim();
 if(c === "surya2026"){
-document.getElementById("pdfBox").style.display="block";
+document.getElementById("lockCover").style.display="none";
+document.getElementById("downloadArea").style.display="block";
 document.getElementById("msg").style.color="green";
-document.getElementById("msg").innerText="Unlock Ho Gaya! Neeche se PDF Download Karo 👇";
+document.getElementById("msg").innerText="Unlock Ho Gaya!";
 } else {
-document.getElementById("msg").innerText="Galat Code! Pehle Form Bharo, Code surya2026 milega.";
+document.getElementById("msg").innerText="Galat Code! Pehle Form Bharo.";
 }
 }
 </script>
+
+</body>
+</html>
 </body>
 </html>

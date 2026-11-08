@@ -3,103 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Surya - Study Helpline</title>
+<title>Study Helpline - Surya Prajh</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-body { background:#f0f2f5; color:#222; }
-.header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color:white; text-align:center; padding:50px 20px 40px; }
-.header img { width:110px; height:110px; border-radius:50%; border:4px solid #ffcc00; object-fit:cover; background:white; }
-.header h1 { font-size:32px; margin:12px 0 5px; }
-.header h1 span { color:#ffcc00; }
-.header p { opacity:0.9; font-size:15px; }
-.btn { display:inline-block; margin:15px 8px 0; padding:12px 22px; border-radius:30px; text-decoration:none; font-weight:bold; color:white; }
-.yt { background:#ff0000; }
-.gh { background:#000; border:1px solid #fff; }
-.container { max-width:900px; margin:-20px auto 30px; padding:0 15px; }
-.card-box { background:white; border-radius:15px; padding:25px; box-shadow:0 5px 20px rgba(0,0,0,0.1); text-align:center; margin-bottom:20px; }
-.card-box h2 { color:#203a43; margin-bottom:10px; }
-.card-box p { color:#555; line-height:1.6; }
-h2.section { text-align:center; margin:25px 0 15px; font-size:24px; }
-.grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
-.course { background:white; border-radius:15px; padding:20px; box-shadow:0 3px 12px rgba(0,0,0,0.08); border-top:5px solid #ffcc00; }
-.course h3 { font-size:19px; margin-bottom:8px; }
-.course p { font-size:14px; color:#555; line-height:1.5; }
-.course a { display:inline-block; margin-top:12px; background:#203a43; color:white; padding:9px 16px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:bold; }
-.course:nth-child(2){ border-top-color:#ff0000; }
-.course:nth-child(3){ border-top-color:#007bff; }
-.course:nth-child(4){ border-top-color:#28a745; }
-.course:nth-child(5){ border-top-color:#ff6600; }
-.course:nth-child(6){ border-top-color:#9b59b6; }
-.footer { text-align:center; padding:20px; color:#777; font-size:13px; }
-@media(max-width:600px){ .grid{ grid-template-columns:1fr; } .header h1{ font-size:26px; } }
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#FFF3D6;color:#222}
+header{background:linear-gradient(180deg,#FF6A00,#FFB300);padding:30px 16px;text-align:center;color:#fff}
+.profile-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.3);background:#fff}
+header h1{font-size:26px;margin-top:10px}
+header p{font-size:13px;margin-top:6px;line-height:1.5}
+.top-btn{display:inline-block;margin-top:12px;padding:10px 18px;border-radius:25px;font-size:13px;font-weight:bold;text-decoration:none;color:#fff}
+.btn-red{background:#E53935}
+.btn-dark{background:#222}
+.container{max-width:900px;margin:auto;padding:16px}
+.card{background:#fff;border-radius:14px;padding:18px;text-align:center;box-shadow:0 2px 10px rgba(255,106,0,.15);margin-bottom:16px;border:1px solid #FFD54F}
+.card h2{font-size:18px;margin-bottom:8px;color:#E65100}
+.card p{font-size:13px;color:#555;line-height:1.6}
+.video-box{background:#000;border-radius:14px;overflow:hidden;margin-bottom:16px;border:3px solid #FF6A00}
+.video-box iframe{width:100%;height:420px;display:block;border:none}
+@media(max-width:600px){.video-box iframe{height:240px}}
+.section-title{text-align:center;font-size:21px;margin:24px 0 14px;color:#E65100}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.course{background:#fff;border-radius:14px;padding:16px;box-shadow:0 2px 10px rgba(255,106,0,.15);border:1px solid #FFD54F}
+.course h3{font-size:17px;margin-bottom:6px;color:#E65100}
+.course p{font-size:13px;color:#555;line-height:1.5}
+.small-btn{display:inline-block;background:#FF6A00;color:#fff !important;text-decoration:none;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:bold;margin-top:10px}
+.ad{background:linear-gradient(135deg,#FF6A00,#FFB300);color:#fff;border-radius:18px;padding:24px;text-align:center;margin-top:20px;box-shadow:0 4px 16px rgba(255,106,0,.35)}
+.ad-logo-text{font-size:28px;font-weight:bold;color:#fff}
+.ad h2{font-size:21px;margin-top:8px}
+.ad p{font-size:13px;margin-top:6px;line-height:1.6}
+.coupon{background:#fff;color:#111;display:inline-block;padding:12px 20px;border-radius:10px;font-weight:bold;font-size:20px;border:2px dashed #FF6A00;margin:12px 0}
+.copy-btn{background:#222;color:#fff;border:none;padding:10px 18px;border-radius:20px;font-weight:bold;cursor:pointer}
+.ad-btn{background:#fff;color:#E65100 !important;text-decoration:none;padding:12px 24px;border-radius:30px;font-weight:bold;display:inline-block;margin-top:12px}
+.ebook-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;text-align:left}
+@media(max-width:600px){.ebook-grid{grid-template-columns:1fr}}
+.ebook{background:#fff;color:#222;border-radius:12px;padding:14px}
+.ebook h3{font-size:15px;color:#E65100;margin-bottom:5px}
+.ebook p{font-size:12px;color:#555;line-height:1.5}
+.ebook .price{font-size:16px;font-weight:bold;color:#111;margin-top:6px}
+.ebook .off-price{font-size:16px;font-weight:bold;color:#2E7D32}
+.footer{text-align:center;padding:20px;font-size:12px;color:#888}
+.note{background:#FFF8E1;border:1px dashed #FF6A00;padding:10px;border-radius:10px;font-size:12px;color:#555;margin-top:10px;line-height:1.5}
 </style>
 </head>
 <body>
 
-<div class="header">
-<img src="https://github.com/suryabuddy.png" alt="Surya">
-<h1>Namaste! Main Hu <span>Surya</span></h1>
-<p>Computer Teacher | Data Analyst | Founder - Study Helpline</p>
-<p>770+ Subscribers • 64+ Videos • Rajasthan</p>
-<a class="btn yt" href="https://youtube.com/@studyhelpline1999">▶ YouTube Channel</a>
-<a class="btn gh" href="https://github.com/suryabuddy">GitHub Profile</a>
-</div>
+<header>
+<img class="profile-photo" src="profile.jpg" alt="Surya Prajh">
+<h1>Namaste! Main Hu Surya</h1>
+<p>Computer Teacher | Data Analyst | Founder - Study Helpline<br>Rajasthan | 778+ Subscribers | 55+ Videos</p>
+<a class="top-btn btn-red" href="https://youtube.com/@studyhelpline1999?si=7czObVJRzdvHI1sA" target="_blank">YouTube Channel</a>
+<a class="top-btn btn-dark" href="https://github.com/suryabuddy" target="_blank">GitHub Profile</a>
+</header>
 
 <div class="container">
-<div class="card-box">
-<h2>👋 Mere Baare Me</h2>
-<p>Main Surya, Study Helpline ka Founder hu. Mera mission simple hai - Rajasthan ke har student ko Computer, RSCIT aur Govt Exam ki taiyari ekdum aasan bhasha me sikhana. Hindi me, bilkul desi style me!</p>
+
+<div class="card">
+<h2>Mere Baare Me</h2>
+<p>Main Surya, Study Helpline ka Founder hu. Mera mission hai - Rajasthan ke har student ko Computer, RSCIT aur Govt Exam ki taiyari ekdum simple aur aasan bhasha me sikhaana.</p>
 </div>
 
-<h2 class="section">📚 Mere Popular Courses</h2>
+<h2 class="section-title">🔥 Latest Video - Rajasthan Ka Sampurn Itihaas</h2>
+
+<div class="video-box">
+<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=studyhelpline1999" allowfullscreen></iframe>
+</div>
+
+<h2 class="section-title">📚 Mere Popular Courses - 3 Playlist</h2>
 
 <div class="grid">
-<div class="course">
-<h3>🏰 Rajasthan GK</h3>
-<p>Rajasthan ka Itihas, Bhugol, Kala-Sanskriti, Jile, Mela aur Govt Exam ke liye full GK. Daily MCQ ke saath.</p>
-<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
-</div>
 
 <div class="course">
-<h3>💻 RSCIT Course</h3>
-<p>RS-CIT ka full course - MS Word, Excel, PowerPoint, Internet aur Computer Fundamentals. Exam + Practical dono ke liye.</p>
-<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
+<h3>📖 Course 1 - Playlist 1</h3>
+<p>Playlist 1 ki saari videos ek hi jagah, sequence me. Shuru se lekar aakhir tak dekho.</p>
+<a class="small-btn" href="https://youtube.com/playlist?list=PLX7MPAwleEm0&si=RUKarDzQKpnmObGa" target="_blank">▶️ Playlist Dekho</a>
 </div>
 
 <div class="course">
-<h3>📊 MS Office</h3>
-<p>MS Word, Excel, PowerPoint ko zero se seekho. Job ke liye sabse kaam aane wali skill, practical ke saath.</p>
-<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
+<h3>📖 Course 2 - Playlist 2</h3>
+<p>Playlist 2 ki saari videos ek hi jagah, sequence me. Shuru se lekar aakhir tak dekho.</p>
+<a class="small-btn" href="https://youtube.com/playlist?list=PLfpOoxrz3SGQ&si=0KFQRxb1VZuZtiT9" target="_blank">▶️ Playlist Dekho</a>
 </div>
 
 <div class="course">
-<h3>🛣️ Toll Series</h3>
-<p>Toll Plaza / Toll Tax se judi job aur exam ki taiyari. Daily nayi series, naye questions aur full concept.</p>
-<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
-</div>
-
-<div class="course">
-<h3>📅 Daily Series</h3>
-<p>Roz ek naya topic, roz ek nayi class. Daily Current Affairs, Daily MCQ aur Daily Computer Class.</p>
-<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
-</div>
-
-<div class="course">
-<h3>⌨️ C Programming</h3>
-<p>C Language ekdum basic se - Lecture 1 se lekar full logic building tak. College + RSCIT students ke liye best.</p>
-<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
-</div>
-</div>
-
-<div class="card-box" style="margin-top:20px;">
-<h2>🔥 Abhi Join Karo!</h2>
-<p>Roz ki free class ke liye YouTube pe Subscribe karo. Bell icon dabana mat bhoolna!</p>
-<a class="btn yt" href="https://youtube.com/@studyhelpline1999">Subscribe Karo</a>
+<h3>📖 Course 3 - Playlist 3</h3>
+<p>Playlist 3 ki saari videos ek hi jagah, sequence me. Shuru se lekar aakhir tak dekho.</p>
+<a class="small-btn" href="https://youtube.com/playlist?list=PLWR41V0cfFKQ&si=OK2IwS_l6_P_yohU" target="_blank">▶️ Playlist Dekho</a>
 </div>
 
 </div>
 
-<div class="footer">Made with ❤️ by Surya • Study Helpline • Jaipur, Rajasthan</div>
+<div class="ad">
+<div class="ad-logo-text">📚 LearnNity.in</div>
+<h2>SPECIAL OFFER - 1 MONTH ONLY</h2>
+<p>Rajasthan CET 2026 - Aa Raha Hai! Are You Ready?<br>12th Level: 1-3 Dec 2026 | Graduate Level: 16-18 Jan 2027</p>
+
+<div class="ebook-grid">
+<div class="ebook">
+<h3>🏆 CET 2026 Combo - 12th + Graduate</h3>
+<p>2544 Pages | 27 Chapters | Complete Notes<br>12th + Graduate - Dono Ek Saath</p>
+<div class="price"><s>Rs 749</s> <span class="off-price">Rs 674</span></div>
+<p style="font-size:11px;">Coupon lagane ke baad</p>
+</div>
+<div class="ebook">
+<h3>📗 CET 12th Level - Complete Notes</h3>
+<p>1100+ PYQs | 13 Chapters | Hindi Medium<br>Exam: 1-3 Dec 2026</p>
+<div class="price"><s>Rs 399</s> <span class="off-price">Rs 359</span></div>
+<p style="font-size:11px;">Coupon lagane ke baad</p>
+</div>
+<div class="ebook">
+<h3>📕 CET Graduate Level - Complete Notes</h3>
+<p>1200+ PYQs | 15 Chapters | Hindi Medium<br>Exam: 16-18 Jan 2027</p>
+<div class="price"><s>Rs 499</s> <span class="off-price">Rs 449</span></div>
+<p style="font-size:11px;">Coupon lagane ke baad</p>
+</div>
+<div class="ebook">
+<h3>⚡ RS-CIT One-Liner Question Bank</h3>
+<p>857 Questions | 29 Pages | 15 Chapters<br>Latest RKCL Syllabus - Quick Revision</p>
+<div class="price"><s>Rs 99</s> <span class="off-price">Rs 49</span></div>
+<p style="font-size:11px;">Limited Time Offer</p>
+</div>
+</div>
+
+<div class="coupon" id="couponCode">SURYAPRAJH10</div>
+<p><b>Coupon Use Karo - FLAT 10% OFF</b><br>Extra 10% OFF on All Courses & Books</p>
+<button class="copy-btn" onclick="copyCoupon()">Coupon Copy Karo</button>
+<br>
+<a class="ad-btn" href="https://learnnity.in" target="_blank">LearnNity Pe Jao - eBook Lo</a>
+</div>
+
+<h2 class="section-title">🎬 Ad Video - Rajasthan CET 2026 - LearnNity</h2>
+
+<div class="video-box">
+<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=studyhelpline1999" allowfullscreen></iframe>
+</div>
+<div class="note">👆 Ye box me wahi LearnNity wali Ad Video chalegi jo tune abhi bheji hai. Jab us video ka YouTube link milega, uska ID yahan daal dena, wo fix ho jayegi.</div>
+
+<div class="card" style="margin-top:20px;">
+<h2>Abhi Join Karo!</h2>
+<p>Roz ki free class ke liye YouTube pe Subscribe karo. Bell Icon dabana mat bhoolna!</p>
+<a class="small-btn" style="background:#E53935;padding:11px 22px;" href="https://youtube.com/@studyhelpline1999?si=7czObVJRzdvHI1sA" target="_blank">Subscribe Karo</a>
+</div>
+
+</div>
+
+<div class="footer">Made with Love by Surya - Study Helpline - Jaipur, Rajasthan</div>
+
+<script>
+function copyCoupon(){
+var c=document.getElementById("couponCode").innerText;
+if(navigator.clipboard){
+navigator.clipboard.writeText(c).then(function(){alert("Coupon Copy Ho Gaya: "+c+" - 10% OFF");});
+}
+else{
+alert("Coupon Code: "+c);
+}
+}
+</script>
 
 </body>
 </html>

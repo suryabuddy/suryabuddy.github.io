@@ -164,5 +164,30 @@ alert("Coupon Code: "+c);
 <h2>📢 Ad Video - Rajasthan CET 2026 - LearnNity</h2>
 <video controls width="100%" src="WhatsApp Video 2026-11-08 at 1.26.18 PM.mp4"></video>
 </div>
+  <div class="card" style="text-align:center; border:2px solid #FF6A00;">
+<h2>📚 Rajasthan GK - Full PDF Unlock</h2>
+<p>Full PDF paane ke liye pehle Form bharo, Code milega.</p>
+<a href="https://forms.gle/fZG3cn27Dh9GGAFw6" target="_blank" style="display:inline-block; background:#FF6A00; color:#fff; padding:12px 20px; border-radius:25px; font-weight:bold; text-decoration:none;">📝 Form Bharo - Code Paao</a>
+<br><br>
+<input type="text" id="unlockCode" placeholder="Yaha Code Daalo - surya2026" style="padding:12px; width:80%; max-width:300px; border-radius:10px; border:1px solid #ccc; text-align:center;">
+<br><br>
+<button onclick="checkCode()" style="background:#000; color:#fff; padding:12px 25px; border-radius:25px; font-weight:bold; border:none;">🔓 PDF Unlock Karo</button>
+<p id="msg" style="color:red; font-weight:bold;"></p>
+<div id="pdfBox" style="display:none;">
+<a href="Rajasthan.pdf" target="_blank" style="display:inline-block; background:green; color:#fff; padding:12px 20px; border-radius:25px; font-weight:bold; text-decoration:none;">📥 Full PDF Download Karo</a>
+</div>
+</div>
+<script>
+function checkCode(){
+var c = document.getElementById("unlockCode").value.trim();
+if(c === "surya2026"){
+document.getElementById("pdfBox").style.display="block";
+document.getElementById("msg").style.color="green";
+document.getElementById("msg").innerText="Unlock Ho Gaya! Neeche se PDF Download Karo 👇";
+} else {
+document.getElementById("msg").innerText="Galat Code! Pehle Form Bharo, Code surya2026 milega.";
+}
+}
+</script>
 </body>
 </html>

@@ -1,25 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Surya - Study Helpline</title>
 <style>
-body{font-family:Arial;text-align:center;background:#f4f4f4;padding:20px}
-.box{background:white;padding:30px;border-radius:15px;max-width:600px;margin:auto;box-shadow:0 0 10px #ccc}
-h1{color:#007bff}
-a{background:#ff0000;color:white;padding:10px 20px;text-decoration:none;border-radius:10px;display:inline-block;margin:5px}
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background:#f0f2f5; color:#222; }
+.header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color:white; text-align:center; padding:50px 20px 40px; }
+.header img { width:110px; height:110px; border-radius:50%; border:4px solid #ffcc00; object-fit:cover; background:white; }
+.header h1 { font-size:32px; margin:12px 0 5px; }
+.header h1 span { color:#ffcc00; }
+.header p { opacity:0.9; font-size:15px; }
+.btn { display:inline-block; margin:15px 8px 0; padding:12px 22px; border-radius:30px; text-decoration:none; font-weight:bold; color:white; }
+.yt { background:#ff0000; }
+.gh { background:#000; border:1px solid #fff; }
+.container { max-width:900px; margin:-20px auto 30px; padding:0 15px; }
+.card-box { background:white; border-radius:15px; padding:25px; box-shadow:0 5px 20px rgba(0,0,0,0.1); text-align:center; margin-bottom:20px; }
+.card-box h2 { color:#203a43; margin-bottom:10px; }
+.card-box p { color:#555; line-height:1.6; }
+h2.section { text-align:center; margin:25px 0 15px; font-size:24px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.course { background:white; border-radius:15px; padding:20px; box-shadow:0 3px 12px rgba(0,0,0,0.08); border-top:5px solid #ffcc00; }
+.course h3 { font-size:19px; margin-bottom:8px; }
+.course p { font-size:14px; color:#555; line-height:1.5; }
+.course a { display:inline-block; margin-top:12px; background:#203a43; color:white; padding:9px 16px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:bold; }
+.course:nth-child(2){ border-top-color:#ff0000; }
+.course:nth-child(3){ border-top-color:#007bff; }
+.course:nth-child(4){ border-top-color:#28a745; }
+.course:nth-child(5){ border-top-color:#ff6600; }
+.course:nth-child(6){ border-top-color:#9b59b6; }
+.footer { text-align:center; padding:20px; color:#777; font-size:13px; }
+@media(max-width:600px){ .grid{ grid-template-columns:1fr; } .header h1{ font-size:26px; } }
 </style>
 </head>
 <body>
-<div class="box">
-<h1>Namaste! Main Hu Surya</h1>
-<p><b>Computer Teacher | Data Analyst | Founder - Study Helpline</b></p>
-<p>Rajasthan GK - History, Geography, Polity, Economy, Art & Culture<br>Ab Padho Smart Tarike Se - AI + Map + Tricks Ke Saath</p>
-<p><b>Exams:</b> RAS | REET | Patwari | Police | SI | LDC | CET</p>
-<br>
-<a href="https://www.youtube.com/@studyhelpline">YouTube Channel</a>
-<a href="https://github.com/suryabuddy">GitHub Profile</a>
-<br><br>
-<p>Website Ban Rahi Hai - Jaldi Full Notes Aayenge!</p>
+
+<div class="header">
+<img src="https://github.com/suryabuddy.png" alt="Surya">
+<h1>Namaste! Main Hu <span>Surya</span></h1>
+<p>Computer Teacher | Data Analyst | Founder - Study Helpline</p>
+<p>770+ Subscribers • 64+ Videos • Rajasthan</p>
+<a class="btn yt" href="https://youtube.com/@studyhelpline1999">▶ YouTube Channel</a>
+<a class="btn gh" href="https://github.com/suryabuddy">GitHub Profile</a>
 </div>
+
+<div class="container">
+<div class="card-box">
+<h2>👋 Mere Baare Me</h2>
+<p>Main Surya, Study Helpline ka Founder hu. Mera mission simple hai - Rajasthan ke har student ko Computer, RSCIT aur Govt Exam ki taiyari ekdum aasan bhasha me sikhana. Hindi me, bilkul desi style me!</p>
+</div>
+
+<h2 class="section">📚 Mere Popular Courses</h2>
+
+<div class="grid">
+<div class="course">
+<h3>🏰 Rajasthan GK</h3>
+<p>Rajasthan ka Itihas, Bhugol, Kala-Sanskriti, Jile, Mela aur Govt Exam ke liye full GK. Daily MCQ ke saath.</p>
+<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
+</div>
+
+<div class="course">
+<h3>💻 RSCIT Course</h3>
+<p>RS-CIT ka full course - MS Word, Excel, PowerPoint, Internet aur Computer Fundamentals. Exam + Practical dono ke liye.</p>
+<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
+</div>
+
+<div class="course">
+<h3>📊 MS Office</h3>
+<p>MS Word, Excel, PowerPoint ko zero se seekho. Job ke liye sabse kaam aane wali skill, practical ke saath.</p>
+<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
+</div>
+
+<div class="course">
+<h3>🛣️ Toll Series</h3>
+<p>Toll Plaza / Toll Tax se judi job aur exam ki taiyari. Daily nayi series, naye questions aur full concept.</p>
+<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
+</div>
+
+<div class="course">
+<h3>📅 Daily Series</h3>
+<p>Roz ek naya topic, roz ek nayi class. Daily Current Affairs, Daily MCQ aur Daily Computer Class.</p>
+<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
+</div>
+
+<div class="course">
+<h3>⌨️ C Programming</h3>
+<p>C Language ekdum basic se - Lecture 1 se lekar full logic building tak. College + RSCIT students ke liye best.</p>
+<a href="https://youtube.com/@studyhelpline1999">Videos Dekho →</a>
+</div>
+</div>
+
+<div class="card-box" style="margin-top:20px;">
+<h2>🔥 Abhi Join Karo!</h2>
+<p>Roz ki free class ke liye YouTube pe Subscribe karo. Bell icon dabana mat bhoolna!</p>
+<a class="btn yt" href="https://youtube.com/@studyhelpline1999">Subscribe Karo</a>
+</div>
+
+</div>
+
+<div class="footer">Made with ❤️ by Surya • Study Helpline • Jaipur, Rajasthan</div>
+
 </body>
 </html>

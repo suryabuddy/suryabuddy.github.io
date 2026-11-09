@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surya - Study Helpline</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#fff}
+.header{background:#ff4d00;color:#fff;padding:14px 14px 16px;display:flex;justify-content:space-between;align-items:center}
+.h-left{display:flex;gap:12px;align-items:center}
+.photo{width:58px;height:58px;background:#ddd;border-radius:50%;flex-shrink:0;display:grid;place-items:center;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo svg{width:36px;height:36px;fill:#888}
+.h-left h1{font-size:21px;line-height:1.1}
+.h-left p{font-size:11px;margin-top:4px;opacity:.95}
+.h-right{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.social-row{display:flex;gap:8px}
+.social-row a{width:38px;height:38px;background:#fff;border-radius:50%;display:grid;place-items:center;text-decoration:none}
+.social-row a svg{width:22px;height:22px;display:block}
+.menu-btn{font-size:20px;background:rgba(0,0,0,.2);border:0;color:#fff;cursor:pointer;width:38px;height:38px;border-radius:8px}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:99}
+.menu{position:fixed;top:0;right:0;width:320px;max-width:85%;height:100%;background:#fff;z-index:100;transform:translateX(105%);transition:.3s;padding:22px;overflow-y:auto}
+.menu.open{transform:translateX(0)}
+.overlay.show{display:block}
+.menu-head{display:flex;justify-content:space-between;align-items:center;color:#222}
+.menu-head h2{font-size:22px}
+.close{font-size:24px;background:none;border:0;cursor:pointer}
+.menu-list{margin-top:22px}
+.menu-list a{display:flex;gap:14px;align-items:center;padding:12px 0;font-size:16px;color:#222;text-decoration:none;border-bottom:1px solid #f0f0f0}
+.menu-list a span{width:38px;height:38px;background:#f0f0f0;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+.menu-list a span svg{width:22px;height:22px;display:block}
+</style>
+</head>
+<body>
 
+<div class="header">
+  <div class="h-left">
+    <div class="photo"><img src="profile.jpg" onerror="this.style.display='none'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6z"/></svg></div>
+    <div><h1>Hi, I'm Surya</h1><p>Simplifying Govt Exam Prep • RSCIT • Tally • Rajasthan GK</p></div>
+  </div>
+  <div class="h-right">
+    <div class="social-row">
+      <a href="https://www.youtube.com/@studyhelpline1999" target="_blank"><svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23 12s0-3.85-.5-5.7a2.9 2.9 0 0 0-2-2C18.6 3.75 12 3.75 12 3.75s-6.6 0-8.5.55a2.9 2.9 0 0 0-2 2C1 8.15 1 12 1 12s0 3.85.5 5.7a2.9 2.9 0 0 0 2 2c1.9.55 8.5.55 8.5.55s6.6 0 8.5-.55a2.9 2.9 0 0 0 2-2c.5-1.85.5-5.7.5-5.7zM9.8 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+      <a href="https://instagram.com/studyhelpline1999" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#E1306C" stroke="none"/></svg></a>
+      <a href="https://whatsapp.com/channel/0029VbDstCEB4hdNAkt9ES1f" target="_blank"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.9 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg></a>
+      <a href="https://suryabuddy.github.io" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg></a>
+      <a href="https://forms.gle/abMMNraXXfA4PQDr8" target="_blank"><svg viewBox="0 0 24 24" fill="#0F9D58"><path d="M6 2h9l5 5v15H6zM14 2v5h5M8 11h8M8 14h8M8 17h5"/></svg></a>
+    </div>
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+<div class="menu" id="menu">
+  <div class="menu-head"><h2>Menu</h2><button class="close" onclick="closeMenu()">✕</button></div>
+  <div class="menu-list">
+    <a href="https://www.youtube.com/@studyhelpline1999" target="_blank"><span><svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23 12s0-3.85-.5-5.7a2.9 2.9 0 0 0-2-2C18.6 3.75 12 3.75 12 3.75s-6.6 0-8.5.55a2.9 2.9 0 0 0-2 2C1 8.15 1 12 1 12s0 3.85.5 5.7a2.9 2.9 0 0 0 2 2c1.9.55 8.5.55 8.5.55s6.6 0 8.5-.55a2.9 2.9 0 0 0 2-2c.5-1.85.5-5.7.5-5.7zM9.8 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></span>YouTube</a>
+    <a href="https://instagram.com/studyhelpline1999" target="_blank"><span><svg viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#E1306C" stroke="none"/></svg></span>Instagram</a>
+    <a href="https://whatsapp.com/channel/0029VbDstCEB4hdNAkt9ES1f" target="_blank"><span><svg viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.9 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg></span>WhatsApp Channel</a>
+    <a href="https://suryabuddy.github.io" target="_blank"><span><svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg></span>Website</a>
+    <a href="https://forms.gle/abMMNraXXfA4PQDr8" target="_blank"><span><svg viewBox="0 0 24 24" fill="#0F9D58"><path d="M6 2h9l5 5v15H6zM14 2v5h5M8 11h8M8 14h8M8 17h5"/></svg></span>Google Form</a>
+  </div>
+</div>
+
+<script>
+function openMenu(){document.getElementById('menu').classList.add('open');document.getElementById('overlay').classList.add('show')}
+function closeMenu(){document.getElementById('menu').classList.remove('open');document.getElementById('overlay').classList.remove('show')}
+</script>
+</body>
+</html>

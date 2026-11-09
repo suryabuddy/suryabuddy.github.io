@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi, I'm Surya</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#fff;color:#222}
+a{text-decoration:none;color:inherit}
 
+/* ORANGE PATTI - PHOTO JAISI */
+.header{background:#ff4d00;color:#fff;padding:14px 14px 16px;display:flex;justify-content:space-between;align-items:center}
+.h-left{display:flex;gap:12px;align-items:center}
+.photo{width:58px;height:58px;background:#b8b8b8;border-radius:50%;flex-shrink:0;display:grid;place-items:center;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo svg{width:36px;height:36px;fill:#7a7a7a}
+.h-left h1{font-size:21px;line-height:1.1}
+.h-left p{font-size:11px;margin-top:4px;opacity:.95}
+.h-right{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.social-top{display:flex;gap:6px}
+.social-top a{width:26px;height:26px;background:#f0b9a0;border-radius:50%;display:grid;place-items:center;font-size:11px;color:#fff;font-weight:900}
+.social-bottom{display:flex;gap:6px;align-items:center}
+.social-bottom a{width:26px;height:26px;background:#e8a88e;border-radius:50%;display:grid;place-items:center;font-size:12px;color:#fff}
+.menu-btn{font-size:18px;background:#00000033;border:0;color:#fff;cursor:pointer;width:32px;height:32px;border-radius:6px}
+
+/* PLAYLIST */
+.sec{padding:22px 16px}
+.sec h2{font-size:38px;line-height:1;letter-spacing:-1px}
+.play-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:18px}
+.p-card{border-radius:10px;padding:20px 10px 14px;text-align:center;position:relative;display:block}
+.p-yellow{background:#f7c948}
+.p-white{border:1.5px solid #ddd;background:#fff}
+.p-card .big{font-size:36px}
+.p-card h3{font-size:15px;margin-top:10px;line-height:1.2}
+.p-card p{font-size:10px;margin-top:6px;color:#333}
+.p-card .arr{position:absolute;right:8px;bottom:12px;width:20px;height:20px;background:#ff4d00;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:10px}
+.p-thumb{height:58px;background:#b8b8b8;border-radius:8px;margin:4px 4px 10px}
+
+/* EBOOKS */
+.grey{background:#e9e9e9}
+.e-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-top:18px}
+.e-card{border-radius:10px;padding:20px 8px 12px;text-align:center;display:block}
+.e-card .big{font-size:32px}
+.e-card h3{font-size:13px;margin-top:10px;line-height:1.2}
+.e-card p{font-size:10px;margin-top:6px}
+.e-card span{display:block;margin-top:8px;font-size:14px}
+.c1{background:#a8b8e0}.c2{background:#8ecfd4}.c3{background:#9ed08a}.c4{background:#a4d68d}
+
+/* BOTTOM - SCAN + FORM + ALSO VISIT */
+.bottom-wrap{padding:14px 16px 18px;position:relative}
+.bottom{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.b-box{border:1.5px solid #ddd;border-radius:12px;padding:12px;text-align:center}
+.b-box small{font-size:12px;color:#555}
+.qr{width:104px;height:104px;background:#b8b8b8;border-radius:10px;margin:12px auto;display:grid;place-items:center;text-align:center;color:#fff;font-size:10px}
+.qr b{font-size:28px;display:block;line-height:1}
+.b-box p{font-size:11px;margin-top:8px}
+.form-box{text-align:left}
+.form-box small{display:block;text-align:center}
+.form-box label{font-size:11px;font-weight:700;display:block;margin-top:12px}
+.form-box input{width:100%;border:0;border-bottom:1px solid #ddd;padding:7px 0;font-size:12px;outline:none}
+.submit{background:#ff4d00;color:#fff;border:0;width:100%;padding:10px;border-radius:8px;font-weight:800;margin-top:16px;font-size:13px}
+.also{position:absolute;right:12px;top:-18px;background:#fff8ec;border:1px solid #ffd9a0;border-radius:8px;padding:8px 10px;text-align:center;width:118px}
+.also b{font-size:11px}
+.also small{font-size:8px;display:block;color:#555}
+.also-links{font-size:8px;margin-top:2px}
+.also-links b{color:#2563eb;font-size:8px}.also-links i{color:#16a34a;font-style:normal;font-size:8px}
+.coupon{background:#ffcc00;border-radius:6px;padding:5px;margin-top:5px}
+.coupon b{font-size:11px}
+.coupon span{font-size:8px;display:block}
+
+/* FOOTER */
+footer{background:#2e2e2e;color:#fff;padding:22px 18px 14px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+footer h4{font-size:14px;margin-bottom:9px}
+footer p,footer a{font-size:11px;color:#e5e5e5;line-height:1.8;display:block}
+.copy{text-align:center;font-size:11px;margin-top:20px;color:#ddd}
+
+/* MENU RIGHT SIDE */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.25);z-index:99}
+.menu{position:fixed;top:0;right:0;width:320px;max-width:85%;height:100%;background:#fff;z-index:100;transform:translateX(105%);transition:.3s;padding:22px}
+.menu.open{transform:translateX(0)}
+.overlay.show{display:block}
+.menu-head{display:flex;justify-content:space-between;align-items:center}
+.menu-head h2{font-size:22px}
+.close{font-size:24px;background:none;border:0;cursor:pointer}
+.menu-list{margin-top:22px}
+.menu-list a{display:flex;gap:14px;align-items:center;padding:11px 0;font-size:16px}
+.menu-list i{width:26px;height:26px;background:#b8b8b8;border-radius:50%;display:block;flex-shrink:0}
+.follow{border-top:1px solid #ddd;margin-top:20px;padding-top:18px}
+.follow h3{font-size:20px}
+.follow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;text-align:center}
+.follow-grid a{font-size:12px}
+.follow-grid span{width:36px;height:36px;background:#b8b8b8;border-radius:50%;display:block;margin:0 auto 6px}
+</style>
+</head>
+<body>
+
+<!-- HEADER - ORANGE PATTI -->
+<div class="header">
+  <div class="h-left">
+    <div class="photo"><img src="profile.jpg" onerror="this.style.display='none'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6z"/></svg></div>
+    <div>
+      <h1>Hi, I'm Surya</h1>
+      <p>Simplifying Govt Exam Prep • RSCIT • Tally • Technical courses or more AI tools</p>
+    </div>
+  </div>
+  <div class="h-right">
+    <!-- UPAR SOCIAL HANDLE -->
+    <div class="social-top">
+      <a href="PASTE_YOUTUBE_LINK" target="_blank">YT</a>
+      <a href="PASTE_INSTAGRAM_LINK" target="_blank">IG</a>
+      <a href="PASTE_WHATSAPP_LINK" target="_blank">WA</a>
+    </div>
+    <div class="social-bottom">
+      <a href="PASTE_YOUTUBE_LINK" target="_blank">▶</a>
+      <a href="PASTE_INSTAGRAM_LINK" target="_blank">◎</a>
+      <a href="PASTE_WHATSAPP_LINK" target="_blank">◉</a>
+      <button class="menu-btn" onclick="openMenu()">☰</button>
+    </div>
+  </div>
+</div>
+
+<!-- YOUTUBE PLAYLIST -->
+<div class="sec" id="playlist">
+  <h2>My YouTube Playlists</h2>
+  <div class="play-grid">
+    <a href="#" class="p-card p-yellow"><div class="big">📖</div><h3>Demo Test<br>PDF - FREE</h3><p>10 Practice Tests • PDF • FREE</p><span style="display:block;margin-top:8px">↓</span><span class="arr">▶</span></a>
+    <a href="#" class="p-card p-white"><div class="p-thumb"></div><h3>Tally</h3><p>5 Videos • Accounting & GST</p><span class="arr">▶</span></a>
+    <a href="#" class="p-card p-white"><div class="p-thumb"></div><h3>Rajasthan History</h3><p>21 Videos • History </p><span class="arr">▶</span></a>
+  </div>
+</div>
+
+<!-- EBOOK SECTION -->
+<div class="sec grey" id="ebooks">
+  <h2>Ebooks & PDF Notes</h2>
+  <div class="e-grid">
+    <div class="e-card c1"><div class="big">📖</div><h3>Computer Notes</h3><p>24 Pages • PDF • Free</p><span>↓</span></div>
+  </div>
+
+<!-- BOTTOM -->
+<div class="bottom-wrap">
+  <div class="also"><b>Also Visit</b><div class="also-links"><b>LearnNity.in</b> • <i>Prepnity.com</i></div><div class="coupon"><b>SURYAPRAJH10</b><span>Coupon: SURYAPRAJH10</span></div></div>
+  <div class="bottom">
+    <div class="b-box"><small>Scan</small><div class="qr"><div><b>▦</b>QR CODE</div></div><p>Scan to Join</p></div>
+    <div class="b-box form-box" id="contact"><small>Get In Touch</small><label>Name</label><input placeholder="Enter your name"><label>Phone</label><input placeholder="Enter your phone number"><button class="submit">Submit</button></div>
+  </div>
+</div>
+
+<!-- FOOTER - POLICY -->
+<footer>
+  <div class="f-grid">
+    <div id="about"><h4>About Us</h4><p>Educational content for exams<br>Free resources & notes<br>RSCIT • Tally • GK</p></div>
+    <div id="policy"><h4>Policy & Guidance - No resell</h4><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Disclaimer</a></div>
+    <div><h4>Quick Links</h4><a href="#playlist">YouTube</a><a href="#ebooks">Ebooks</a><a href="#contact">Contact</a></div>
+  </div>
+  <div class="copy">© 2026 Surya. All rights reserved.</div>
+</footer>
+
+<!-- MENU - RIGHT SIDE -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+<div class="menu" id="menu">
+  <div class="menu-head"><h2>Menu</h2><button class="close" onclick="closeMenu()">✕</button></div>
+  <div class="menu-list">
+    <a href="#" onclick="closeMenu()"><i></i>Home</a>
+    <a href="#playlist" onclick="closeMenu()"><i></i>My YouTube Playlists</a>
+    <a href="#ebooks" onclick="closeMenu()"><i></i>Ebooks & PDF Notes</a>
+    <a href="#about" onclick="closeMenu()"><i></i>About Us</a>
+    <a href="#policy" onclick="closeMenu()"><i></i>Policy & Guidance</a>
+    <a href="#contact" onclick="closeMenu()"><i></i>Contact</a>
+  </div>
+  <div class="follow">
+    <h3>Follow Us</h3>
+    <div class="follow-grid">
+      <a href="PASTE_YOUTUBE_LINK" target="_blank"><span></span>YouTube</a>
+      <a href="PASTE_INSTAGRAM_LINK" target="_blank"><span></span>Instagram</a>
+      <a href="PASTE_WHATSAPP_LINK" target="_blank"><span></span>WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openMenu(){document.getElementById('menu').classList.add('open');document.getElementById('overlay').classList.add('show')}
+function closeMenu(){document.getElementById('menu').classList.remove('open');document.getElementById('overlay').classList.remove('show')}
+</script>
+
+</body>
+</html>

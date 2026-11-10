@@ -135,7 +135,45 @@ body{background:#fff}
     </div>
 
     <!-- ===== YAHAN SE NAYI EBOOK ADD KARNA ===== -->
+<!-- ===== 2. HANUMAN CHALISA EBOOK ===== -->
+<div class="e-card">
+  <div class="e-cover" style="padding:0; height:190px;">
+    <img src="chalisalock.jpeg" alt="Shri Hanuman Chalisa" style="width:100%; height:100%; object-fit:cover; display:block;">
+    <span class="e-badge" style="background:#e11d48;">₹1 ONLY</span>
+  </div>
+  <div class="e-body">
+    <h3>SHRI HANUMAN CHALISA</h3>
+    <p>12 Pages • Hindi • Coupon Code se Open Hoga</p>
+    <div class="e-btns">
+      <a href="javascript:void(0)" class="e-view" onclick="document.getElementById('hanuman-pay').style.display='block'">👁️ Preview</a>
+      <a href="javascript:void(0)" class="e-down" onclick="document.getElementById('hanuman-pay').style.display='block'">🔓 ₹1 Me Lein</a>
+    </div>
 
+    <!-- Pay + Coupon Box -->
+    <div id="hanuman-pay" style="display:none; margin-top:12px; border-top:1px dashed #ddd; padding-top:12px; text-align:center;">
+      <b style="font-size:13px;">1. QR Scan Karke ₹1 Pay Karein</b>
+      <img src="pay-qr.png" style="width:130px; margin:8px auto; display:block; border:1px solid #eee; border-radius:8px;">
+      <b style="font-size:13px;">2. Coupon Code Daalein</b>
+      <input id="couponInput" type="text" placeholder="Coupon Code" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; text-align:center; margin-top:6px; text-transform:uppercase;">
+      <button onclick="checkCoupon()" style="width:100%; margin-top:8px; background:#16a34a; color:#fff; border:none; padding:11px; border-radius:8px; font-weight:700; cursor:pointer;">Unlock & Download</button>
+      <p id="couponMsg" style="font-size:13px; color:red; margin:8px 0 0;"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+function checkCoupon(){
+  var code = document.getElementById('couponInput').value.trim().toUpperCase();
+  if(code === "JAIHANUMAN"){
+    document.getElementById('couponMsg').style.color = "green";
+    document.getElementById('couponMsg').innerText = "Sahi Code! Download ho raha hai...";
+    window.open("Hanuman-chalisa.pdf", "_blank");
+  } else {
+    document.getElementById('couponMsg').style.color = "red";
+    document.getElementById('couponMsg').innerText = "Galat Code! Pehle ₹1 Pay karein.";
+  }
+}
+</script>
   </div>
 </div>
 <!-- ===== EBOOK SECTION KHATAM ===== -->

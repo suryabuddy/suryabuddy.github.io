@@ -7,7 +7,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{background:#fff}
-.header{background:#ff8C00;color:#fff;padding:14px 14px 16px;display:flex;justify-content:space-between;align-items:center}
+.header{background:#ff8D00;color:#fff;padding:14px 14px 16px;display:flex;justify-content:space-between;align-items:center}
 .h-left{display:flex;gap:12px;align-items:center}
 .photo{width:58px;height:58px;background:#ddd;border-radius:50%;flex-shrink:0;display:grid;place-items:center;overflow:hidden}
 .photo img{width:100%;height:100%;object-fit:cover}
@@ -177,6 +177,47 @@ function checkCoupon(){
   </div>
 </div>
 <!-- ===== EBOOK SECTION KHATAM ===== -->
+  <!-- FINAL RSCIT NOTES - FINAL COLOR #ff8d00 -->
+<section id="rscit-notes" style="padding:15px; max-width:800px; margin:auto; font-family: sans-serif;">
+  <h2 style="font-size:22px; font-weight:bold; margin-bottom:5px;">📚 RSCIT Complete Notes</h2>
+  <p style="color:#666; margin-bottom:15px; font-size:14px;">Unit par click karo, notes yahin khulenge</p>
+  
+  <div style="display:grid; grid-template-columns: 1fr; gap:10px;">
+    <button onclick="showNote(1)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">1. Introduction to Computers</button>
+    <button onclick="showNote(2)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">2. Computer System</button>
+    <button onclick="showNote(3)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">3. Exploring Your Computer</button>
+    <button onclick="showNote(4)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">4. Introduction to Internet</button>
+    <button onclick="showNote(5)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">5. Digital Payment & Platforms</button>
+    <button onclick="showNote(6)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">6. Internet Applications</button>
+    <button onclick="showNote(7)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">7. Digital Services for Citizens of Rajasthan</button>
+    <button onclick="showNote(8)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">8. Accessing Citizen Service in Rajasthan</button>
+    <button onclick="showNote(9)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">9. Exploring Common Citizen-Centric Services</button>
+    <button onclick="showNote(10)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">10. Working with Mobile Devices / Smartphone</button>
+    <button onclick="showNote(11)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">11. Microsoft Word</button>
+    <button onclick="showNote(12)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">12. Microsoft Excel</button>
+    <button onclick="showNote(13)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">13. MS PowerPoint</button>
+    <button onclick="showNote(14)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">14. Cyber Security</button>
+    <button onclick="showNote(15)" style="padding:14px; text-align:left; border:none; border-radius:10px; background:#ff8d00; color:white; font-weight:bold; cursor:pointer;">15. Managing Your Computer</button>
+  </div>
+
+  <!-- NOTES YAHAN KHULENGE - ARTICLE JAISA -->
+  <div id="noteBox" style="display:none; margin-top:20px; padding:20px; border:1px solid #eee; border-radius:12px; background:#fff; box-shadow:0 4px 12px rgba(0,0,0,0.06); line-height:1.7;"></div>
+</section>
+
+<script>
+const notesData = {
+  1: "<h3>Unit 1: Introduction to Computers</h3><p>Yahan Unit 1 ka pura notes article ki tarah likhna...</p>",
+  2: "<h3>Unit 2: Computer System</h3><p>Yahan Unit 2 ka notes...</p>"
+  // Aise hi 15 tak add karte jana
+};
+
+function showNote(n){
+  const box = document.getElementById('noteBox');
+  box.style.display='block';
+  box.innerHTML = notesData[n] || `<h3>Unit ${n}</h3><p>Is unit ke notes jald hi add honge. Yahan par tu blog post ki tarah text likh sakta hai.</p>`;
+  box.scrollIntoView({behavior:'smooth', block:'start'});
+}
+</script>
   <!-- ===== PAYMENT SECTION ===== -->
 <style>
 .pay-sec{padding:10px 14px 30px;max-width:900px;margin:0 auto}

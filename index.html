@@ -188,6 +188,27 @@ body{background:#fff}
 <p style="color:#991b1b;font-weight:600;font-size:13px;margin-bottom:6px;">Hamari Ebooks aur Content ko copy, re-use, re-sell ya kahi aur upload na karein.</p>
 <p style="color:#b91c1c;font-weight:800;margin-top:10px;"><b>Study Helpline & Team(BITTU) SuryaBuddy</b> - Aapki padhai me madad ke liye humesha aapke saath.</p>
 </div>
+  <!-- LOCK MODAL - surya1999 -->
+<div id="lockModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;justify-content:center;align-items:center">
+<div style="background:#fff;padding:25px;border-radius:15px;width:90%;max-width:350px;text-align:center">
+<h3 id="lockTitle">Unit Locked</h3>
+<p>Demo free hai, full unlock ke liye admin password dalo</p>
+<input id="passInput" type="password" inputmode="text" maxlength="12" placeholder="****" style="width:100%;padding:12px;border-radius:8px;border:2px solid #cc0000;text-align:center;font-size:18px;letter-spacing:5px">
+<br><br>
+<button onclick="checkPass()" style="background:#cc0000;color:#fff;padding:12px 25px;border:none;border-radius:8px;font-weight:800;width:100%">🔓 Unlock - Admin Only</button>
+<br><br>
+<button onclick="closeLock()" style="background:#eee;padding:8px 20px;border:none;border-radius:6px">Band Karo</button>
+</div>
+</div>
+<script>
+let currentUnit=0;
+let masterPass="surya1999";
+let unlockedUnits=JSON.parse(localStorage.getItem("unlockedUnits")||"[]");
+function openUnitLock(n){currentUnit=n;if(unlockedUnits.includes(n)){alert("Unit "+n+" unlocked hai!");return;}document.getElementById("lockTitle").innerText="Unit "+n+" Locked 🔒";document.getElementById("lockModal").style.display="flex";document.getElementById("passInput").value="";document.getElementById("passInput").focus();}
+function closeLock(){document.getElementById("lockModal").style.display="none";}
+function checkPass(){let p=document.getElementById("passInput").value;if(p===masterPass){unlockedUnits.push(currentUnit);localStorage.setItem("unlockedUnits",JSON.stringify(unlockedUnits));document.getElementById("badge"+currentUnit).innerText="🔓";closeLock();alert("Unit "+currentUnit+" Unlocked!");}else{alert("Galat password!");}}
+(function(){unlockedUnits.forEach(n=>{let b=document.getElementById("badge"+n);if(b)b.innerText="🔓";});})();
+</script>
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

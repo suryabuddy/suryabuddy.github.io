@@ -153,31 +153,60 @@ body{background:#fff}
   </div>
 
   <!-- RIGHT - 15 NOTES ALAG PAGE -->
-  <div class="final-right">
-    <div class="note-box">
-      <h3>📚 RSCIT Notes <span>15 Topics</span></h3>
-      <div class="note-list">
-        <a href="unit1.html">01. Computer Ke Mool Siddhant</a>
-        <a href="unit2.html">02. Windows Operating System</a>
-        <a href="unit3.html">03. MS Word - Basics & Tools</a>
-        <a href="unit4.html">04. MS Excel - Formulas & Sheets</a>
-        <a href="unit5.html">05. MS PowerPoint - Presentations</a>
-        <a href="unit6.html">06. Internet & Email Basics</a>
-        <a href="unit7.html">07. Computer Networking Concepts</a>
-        <a href="unit8.html">08. DBMS Basics & Data Management</a>
-        <a href="unit9.html">09. Typing & Hindi Typing Practice</a>
-        <a href="unit10.html">10. Cyber Security & Safety</a>
-        <a href="unit11.html">11. Digital Payments & UPI</a>
-        <a href="unit12.html">12. Rajasthan Govt Schemes & Portals</a>
-        <a href="unit13.html">13. Important Computer Terms</a>
-        <a href="unit14.html">14. Practice MCQ Section</a>
-        <a href="unit15.html">15. Exam Preparation Tips</a>
-      </div>
-      <p style="font-size:11px;color:#777;margin-top:10px;text-align:center">Download PDF • All topics updated</p>
+  <div id="allUnitsLock">
+  <!-- Unit 01 -->
+  <button class="unit-btn-lock" onclick="openUnitLock(1)">01. Computer Ke Mool Siddhant <span id="badge1">🔒</span></button>
+  <div class="unit-preview" id="preview1">
+    <div style="background:#fff5f5;padding:10px;border-radius:8px;border:1px dashed #b91c1c;font-size:13px">
+      <b>Demo:</b> Computer kya hai... <br>
+      <img src="page_1.png" style="width:100%;border-radius:8px;margin-top:6px">
+      <p style="color:#b91c1c;font-weight:800">Demo khatam - Full lock hai</p>
     </div>
+    <div class="locked-imgs" id="locked1">
+      <img src="page_2.png" style="width:100%"><img src="page_3.png" style="width:100%"><img src="page_4.png" style="width:100%"><img src="page_5.png" style="width:100%"><img src="page_6.png" style="width:100%"><img src="page_7.png" style="width:100%"><img src="page_8.png" style="width:100%">
+    </div>
+    <button class="btn-unlock" onclick="openLockModal(1)">🔓 Unlock - Admin Only</button>
   </div>
 
+  <!-- Baaki 02-15 ke liye same repeat - copy paste -->
+  <button class="unit-btn-lock" onclick="openUnitLock(2)">02. Windows Operating System <span id="badge2">🔒</span></button>
+  <div class="unit-preview" id="preview2" style="display:none"><div style="background:#fff5f5;padding:10px">Demo - Windows kya hai...</div><div class="locked-imgs" id="locked2">Full Windows content blur me</div><button class="btn-unlock" onclick="openLockModal(2)">🔓 Unlock</button></div>
+
+  <!-- 03-15 tak aise hi... -->
+  <button class="unit-btn-lock" onclick="openUnitLock(3)">03. MS Word <span id="badge3">🔒</span></button>
+  <div class="unit-preview" id="preview3" style="display:none">...</div>
+  <!-- 15 tak same -->
 </div>
+
+<style>
+.unit-btn-lock{background:#cc0000;color:#fff;padding:13px 15px;border:none;width:100%;border-radius:10px;margin-bottom:8px;font-weight:800;text-align:left;display:flex;justify-content:space-between;cursor:pointer}
+.unit-preview{display:none;background:#fff;border:2px solid #b91c1c;border-radius:12px;padding:12px;margin-bottom:12px}
+.unit-preview.active{display:block}
+.locked-imgs{filter:blur(10px);pointer-events:none;user-select:none}
+.locked-imgs.unlocked{filter:none;pointer-events:auto;user-select:auto}
+.btn-unlock{background:#b91c1c;color:#fff;width:100%;padding:11px;border:none;border-radius:8px;font-weight:900;margin-top:8px}
+</style>
+
+<!-- STAR PASSWORD MODAL - Sabse neeche </body> se pehle lagana -->
+<div id="lockModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;justify-content:center;align-items:center;padding:15px">
+  <div style="background:#fff;padding:20px;border-radius:14px;max-width:320px;width:100%;border:3px solid #b91c1c;text-align:center">
+    <h3 style="color:#b91c1c">🔒 Admin Password</h3>
+    <input id="passInput" type="password" inputmode="numeric" placeholder="****" maxlength="6" style="width:100%;padding:13px;font-size:20px;text-align:center;letter-spacing:10px;border:2px solid #b91c1c;border-radius:10px;margin:10px 0">
+    <p style="font-size:11px;color:#888">Number dabao, **** dikhega</p>
+    <button onclick="checkPass()" style="background:#b91c1c;color:#fff;width:100%;padding:11px;border:none;border-radius:8px;font-weight:900">UNLOCK</button>
+    <button onclick="closeLockModal()" style="background:#eee;width:100%;padding:9px;border:none;border-radius:8px;margin-top:8px">Cancel</button>
+  </div>
+</div>
+
+<script>
+let masterPass="1234"; let curUnit=null; let unlocked=JSON.parse(localStorage.getItem('rscit_lock')||'[]');
+function openUnitLock(n){ document.querySelectorAll('.unit-preview').forEach(d=>{if(d.id!='preview'+n) d.classList.remove('active');}); let p=document.getElementById('preview'+n); p.classList.toggle('active'); if(p.classList.contains('active')) p.style.display='block'; else p.style.display='none'; }
+function openLockModal(n){ if(unlocked.includes(n)){ document.getElementById('locked'+n).classList.add('unlocked'); document.getElementById('badge'+n).innerText='✅'; return; } curUnit=n; document.getElementById('lockModal').style.display='flex'; document.getElementById('passInput').value=''; document.getElementById('passInput').focus(); }
+function closeLockModal(){ document.getElementById('lockModal').style.display='none'; }
+function checkPass(){ if(document.getElementById('passInput').value===masterPass){ if(!unlocked.includes(curUnit)){ unlocked.push(curUnit); localStorage.setItem('rscit_lock',JSON.stringify(unlocked)); } document.getElementById('locked'+curUnit).classList.add('unlocked'); document.getElementById('badge'+curUnit).innerText='✅'; closeLockModal(); } else { alert('Galat Password!'); } }
+</script>
+
+
 <!-- ===== FINAL CODE END ===== -->
     <!-- NAYA EBOOK BANNER -->
     <div style="background:#fff7ed; border:2px solid #ff7a00; border-radius:12px; padding:20px; text-align:center; margin:20px 12px;">

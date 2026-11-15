@@ -152,68 +152,29 @@ body{background:#fff}
     </div>
   </div>
 
-  <!-- RIGHT - 15 NOTES ALAG PAGE -->
-  <div id="allUnitsLock">
-  <!-- Unit 01 -->
-  <button class="unit-btn-lock" onclick="openUnitLock(1)">01. Computer Ke Mool Siddhant <span id="badge1">🔒</span></button>
-  <div class="unit-preview" id="preview1">
-    <div style="background:#fff5f5;padding:10px;border-radius:8px;border:1px dashed #b91c1c;font-size:13px">
-      <b>Demo:</b> Computer kya hai... <br>
-      <img src="page_1.png" style="width:100%;border-radius:8px;margin-top:6px">
-      <p style="color:#b91c1c;font-weight:800">Demo khatam - Full lock hai</p>
-    </div>
-    <div class="locked-imgs" id="locked1">
-      <img src="page_2.png" style="width:100%"><img src="page_3.png" style="width:100%"><img src="page_4.png" style="width:100%"><img src="page_5.png" style="width:100%"><img src="page_6.png" style="width:100%"><img src="page_7.png" style="width:100%"><img src="page_8.png" style="width:100%">
-    </div>
-    <button class="btn-unlock" onclick="openLockModal(1)">🔓 Unlock - Admin Only</button>
-  </div>
-
-  <!-- Baaki 02-15 ke liye same repeat - copy paste -->
-  <button class="unit-btn-lock" onclick="openUnitLock(2)">02. Windows Operating System <span id="badge2">🔒</span></button>
-  <div class="unit-preview" id="preview2" style="display:none"><div style="background:#fff5f5;padding:10px">Demo - Windows kya hai...</div><div class="locked-imgs" id="locked2">Full Windows content blur me</div><button class="btn-unlock" onclick="openLockModal(2)">🔓 Unlock</button></div>
-
-  <!-- 03-15 tak aise hi... -->
-  <button class="unit-btn-lock" onclick="openUnitLock(3)">03. MS Word <span id="badge3">🔒</span></button>
-  <div class="unit-preview" id="preview3" style="display:none">...</div>
-  <!-- 15 tak same -->
+  <!-- RIGHT - 15 NOTES ---->
+  <!-- RIGHT - 15 NOTES - FINAL 15 BUTTONS -->
+<div id="allUnitsLock" style="display:flex;flex-direction:column;gap:10px">
+<button class="unit-btn-lock" onclick="openUnitLock(1)">01. Computer Ke Mool Siddhant <span id="badge1">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(2)">02. Windows Operating System <span id="badge2">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(3)">03. MS Word <span id="badge3">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(4)">04. MS Excel <span id="badge4">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(5)">05. MS PowerPoint <span id="badge5">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(6)">06. Internet & Email <span id="badge6">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(7)">07. Networking <span id="badge7">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(8)">08. DBMS <span id="badge8">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(9)">09. Typing <span id="badge9">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(10)">10. Cyber Security <span id="badge10">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(11)">11. Digital Payments <span id="badge11">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(12)">12. Govt Schemes <span id="badge12">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(13)">13. Computer Terms <span id="badge13">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(14)">14. Practice MCQ <span id="badge14">🔒</span></button>
+<button class="unit-btn-lock" onclick="openUnitLock(15)">15. Exam Tips <span id="badge15">🔒</span></button>
 </div>
 
 <style>
-.unit-btn-lock{background:#cc0000;color:#fff;padding:13px 15px;border:none;width:100%;border-radius:10px;margin-bottom:8px;font-weight:800;text-align:left;display:flex;justify-content:space-between;cursor:pointer}
-.unit-preview{display:none;background:#fff;border:2px solid #b91c1c;border-radius:12px;padding:12px;margin-bottom:12px}
-.unit-preview.active{display:block}
-.locked-imgs{filter:blur(10px);pointer-events:none;user-select:none}
-.locked-imgs.unlocked{filter:none;pointer-events:auto;user-select:auto}
-.btn-unlock{background:#b91c1c;color:#fff;width:100%;padding:11px;border:none;border-radius:8px;font-weight:900;margin-top:8px}
+.unit-btn-lock{background:#cc0000;color:#fff;padding:13px;border:none;width:100%;border-radius:10px;font-weight:800;text-align:left;display:flex;justify-content:space-between;cursor:pointer}
 </style>
-
-<!-- STAR PASSWORD MODAL - Sabse neeche </body> se pehle lagana -->
-<div id="lockModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;justify-content:center;align-items:center;padding:15px">
-  <div style="background:#fff;padding:20px;border-radius:14px;max-width:320px;width:100%;border:3px solid #b91c1c;text-align:center">
-    <h3 style="color:#b91c1c">🔒 Admin Password</h3>
-    <input id="passInput" type="password" inputmode="numeric" placeholder="****" maxlength="6" style="width:100%;padding:13px;font-size:20px;text-align:center;letter-spacing:10px;border:2px solid #b91c1c;border-radius:10px;margin:10px 0">
-    <p style="font-size:11px;color:#888">Number dabao, **** dikhega</p>
-    <button onclick="checkPass()" style="background:#b91c1c;color:#fff;width:100%;padding:11px;border:none;border-radius:8px;font-weight:900">UNLOCK</button>
-    <button onclick="closeLockModal()" style="background:#eee;width:100%;padding:9px;border:none;border-radius:8px;margin-top:8px">Cancel</button>
-  </div>
-</div>
-
-<script>
-let masterPass="1234"; let curUnit=null; let unlocked=JSON.parse(localStorage.getItem('rscit_lock')||'[]');
-function openUnitLock(n){ document.querySelectorAll('.unit-preview').forEach(d=>{if(d.id!='preview'+n) d.classList.remove('active');}); let p=document.getElementById('preview'+n); p.classList.toggle('active'); if(p.classList.contains('active')) p.style.display='block'; else p.style.display='none'; }
-function openLockModal(n){ if(unlocked.includes(n)){ document.getElementById('locked'+n).classList.add('unlocked'); document.getElementById('badge'+n).innerText='✅'; return; } curUnit=n; document.getElementById('lockModal').style.display='flex'; document.getElementById('passInput').value=''; document.getElementById('passInput').focus(); }
-function closeLockModal(){ document.getElementById('lockModal').style.display='none'; }
-function checkPass(){ if(document.getElementById('passInput').value===masterPass){ if(!unlocked.includes(curUnit)){ unlocked.push(curUnit); localStorage.setItem('rscit_lock',JSON.stringify(unlocked)); } document.getElementById('locked'+curUnit).classList.add('unlocked'); document.getElementById('badge'+curUnit).innerText='✅'; closeLockModal(); } else { alert('Galat Password!'); } }
-</script>
-
-
-<!-- ===== FINAL CODE END ===== -->
-    <!-- NAYA EBOOK BANNER -->
-    <div style="background:#fff7ed; border:2px solid #ff7a00; border-radius:12px; padding:20px; text-align:center; margin:20px 12px;">
-      <h2 style="margin:0 0 6px;">📚 Ebooks & Notes</h2>
-      <p style="margin:0 0 10px;">Sabhi PDFs ab alag page par</p>
-      <a href="ebooks.html" style="display:inline-block; background:#ff7a00; color:white; padding:10px 22px; border-radius:8px; text-decoration:none; font-weight:bold;">Explore All Ebooks →</a>
-    </div>
 <!-- ===== EBOOK SECTION KHATAM ===== -->
   <!-- About Section -->
 <div class="about-card" style="background:#fff5f5;border:1px solid #b91c1c;border-radius:14px;padding:18px;margin-top:20px;">

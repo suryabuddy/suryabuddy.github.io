@@ -3,20 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unit 8 - MS WORD</title>
+<title>Unit 9 - MS Excel Complete</title>
 <style>
-body { font-family: 'Nirmala UI', 'Mangal', sans-serif; line-height:1.8; margin:0; padding:15px; background:#fff5f5; color:#222; }
-.container { max-width:900px; margin:0 auto; background:white; padding:25px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); border-top:5px solid #b91c1c; }
-h1 { text-align:center; color:#b91c1c; border-bottom:3px solid #fecaca; padding-bottom:10px; }
-p { font-size:17px; margin:12px 0; text-align:justify; }
-.back-btn { display:inline-block; background:#b91c1c; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-bottom:15px; }
+body{font-family:'Nirmala UI',Mangal,sans-serif;line-height:1.9;margin:0;padding:15px;background:#f0f9f0;color:#222}
+.container{max-width:950px;margin:0 auto;background:#fff;padding:25px;border-radius:12px;border-top:6px solid #15803d;box-shadow:0 2px 12px rgba(0,0,0,0.1)}
+h1{color:#15803d;text-align:center;border-bottom:3px solid #bbf7d0;padding-bottom:10px}
+h2{color:#15803d;border-left:5px solid #15803d;padding-left:10px;margin-top:30px}
+p{font-size:17px;text-align:justify;margin:11px 0}
+table{width:100%;border-collapse:collapse;margin:15px 0}
+th,td{border:1px solid #333;padding:8px;text-align:left;font-size:15px}
+th{background:#dcfce7}
+.back-btn{display:inline-block;background:#15803d;color:#fff;padding:10px 20px;text-decoration:none;border-radius:6px;margin-bottom:15px;font-weight:700}
 </style>
 </head>
 <body>
 <div class="container">
 <a href="index.html" class="back-btn">← Back to Home</a>
-<h1>अध्याय - 8 : MS WORD</h1>
+<h1>अध्याय 9 :- माइक्रोसॉफ्ट एक्सेल</h1>
 
+<p><b>Freeze Panes - विशिष्ट रो और कॉलम को एक एक वर्कशीट में freeze किया जा सकता है। वर्कशीट का सिर्फ फ्रीज किया हुआ हिस्सा हर समय दृश्यमान रहता है।</b></p>
+
+<p><b>पेज लेआउट टैब</b></p>
+<p><b>वर्कशीट / वर्कबुक को प्रिन्ट करना</b></p>
+<p><b>वर्कशीट को प्रिन्ट करने के लिए file tab का चयन कर print पर क्लिक करें।</b></p>
+
+<p><b>प्रिन्ट एरिया को सेट करना</b></p>
+<p>• <b>प्रिन्ट एरिया को सेट करने के लिए पहले cells को सेलेक्ट करें।</b></p>
+<p>• <b>उसके बाद page layout tab के page setup group में print area पर click करें।</b></p>
+<p>• <b>इसके बाद सेट print area पर क्लिक करें।</b></p>
+
+<p><b>सॉर्टिंग</b></p>
+<p><b>अपने वर्कशीट के डेटा का एक विशेष क्रम में आयोजन मूल रूप से सॉर्टिंग कहलाता है। उदाहरण के लिए एक स्कूल के छात्रों की सूची वर्णमाला के क्रमानुसार।</b></p>
+<p>• <b>एक सेल में कॉलम का चयन करें जिसे आप सॉर्ट करना चाहते हैं।</b></p>
+<p>• <b>अब home tab पर editing group में sort&filter कमांड पर क्लिक करें।</b></p>
+<p>• <b>A से Z का चयन करें आपका डाटा अल्फाबेटिकली सॉर्ट हो जाएगा।</b></p>
+<p>• <b>डाटा को रिवर्स वर्णमाला के क्रम में क्रमबद्ध करने के लिए Z से A का चयन करें।</b></p>
+
+<p><b>फ़िल्टरिंग</b></p>
+<p><b>इसी तरह फ़िल्टर की सुविधा को परिणाम के सटीक और आवश्यक अनुसार ही सीमित डेटा प्रदर्शित करने लिए इस्तेमाल किया जा सकता है।</b></p>
+<p><b>उदाहरण के लिए अगर आप केवल उन पंक्तियों (Rows) को जिसमे छात्र एक विषय में 70 से अधिक अंक हासिल (Obtained Marks) किया है, के डेटा प्रदर्शित / शामिल (Display) करना चाहते हैं तो डेटा के निशान स्तंभ (Marks Column) का उपयोग कर फ़िल्टर (Filter) किया जा सकता है।</b></p>
+<p>• <b>एक सेल में कॉलम का चयन करें जिसे आप filter करना चाहते हैं।</b></p>
+<p>• <b>डाटा को filter करने के लिए data tab के sort&filter group में filter command पर क्लिक करें।</b></p>
+
+<p><b>बुनियादी फॉर्मूलाज और फंक्शन्स</b></p>
+<p><b>Formulas (सूत्र) वो समीकरण (Equation) है जो आप की वर्कशीट में वैल्यूज (Values) पर गणना (Calculations) का प्रदर्शन करते हैं। माइक्रोसॉफ्ट एक्सेल (MS Excel) में निम्नबुनियादी फॉर्मूले हैं।</b></p>
+<p>• <b>जोड़ना (Addition) (+)</b></p>
+<p>• <b>घटाना (Subtraction) (-)</b></p>
+<p>• <b>गुणा करना (Multiplication) (*)</b></p>
+<p>• <b>विभाजन (Division) (/)</b></p>
+<p><b>एक साधारण गणना (Simple Calculation) करने के लिए, आपको एक सूत्र (Formula) के आगे बराबर equal (=) प्रतीक (Symbol) के बाद गणना (Calculations) लिखनी होगी। उदाहरण के लिए , (5 + 79) सेल के परिणाम में 84 देगा कई ऑपरेशनों (Operations) को भी इसी तरह एक सूत्र में किया जा सकता है (=5+89 *56/8)</b></p>
+
+<table>
+<tr><th>फंक्शन</th><th>परिणाम</th></tr>
+<tr><td><b>SUM</b></td><td><b>(sum) के द्वारा हम आर्गुमेंट (Argument) में उपस्थित सभी सेल के मूल्यों को जोड़ सकते है।</b></td></tr>
+<tr><td><b>AVERAGE</b></td><td><b>Average के द्वारा हम आर्गुमेंट (Argument) में उपस्थित सभी सेल के मूल्यों का औसत देता है।</b></td></tr>
+<tr><td><b>COUNT</b></td><td><b>दी गई रेंज में केवल न्यूमेरिकल वैल्यू को गिनता है।</b></td></tr>
+<tr><td><b>COUNTA</b></td><td><b>Counta फंक्शन उन सेल को गिनता है जो खाली नहीं है।</b></td></tr>
+<tr><td><b>COUNTIF</b></td><td><b>एक क्राइटेरिया (Criteria) के मिलने पे मैच (Match) करते हुए आइटम की गणना (Count) करता है।</b></td></tr>
+<tr><td><b>COUNTBLANK</b></td><td><b>यह फंक्शन चयनित सेलों में से खाली सेलों को गिनता है।</b></td></tr>
+<tr><td><b>MAX</b></td><td><b>आर्गुमेंट (Argument) में उपस्थित सभी सेल के मूल्यों में से अधिकतम मान (Maximum Value) को देता है।</b></td></tr>
+<tr><td><b>MIN</b></td><td><b>आर्गुमेंट (Argument) में उपस्थित सभी सेल के मूल्यों में से न्यूनतम मान (Minimum Value) को देता है।</b></td></tr>
+<tr><td><b>CONCATENATE</b></td><td><b>दो या दो अधिक टेक्स्ट (Text) की स्ट्रिंग को जोड़ता है।</b></td></tr>
+<tr><td><b>LEFT</b></td><td><b>एक स्ट्रिंग (String) के बायीं ओर (Left side) से शुरू करते हुए कितने अक्षर (character) संख्या (Number) बताता है।</b></td></tr>
+<tr><td><b>RIGHT</b></td><td><b>एक स्ट्रिंग (String) के दायीं (Right side) ओर से शुरू करते हुए कितने अक्षर (character) संख्या (Number) बताता है।</b></td></tr>
+<tr><td><b>LEN</b></td><td><b>टेक्स्ट स्ट्रिंग (Text String) की लम्बाई (length) को देता है।</b></td></tr>
+<tr><td><b>TRIM</b></td><td><b>एक टेक्स्ट (Text) शुरुआत में उपस्थित रिक्त स्थान (Space) को निकलता है।</b></td></tr>
+<tr><td><b>LOWER</b></td><td><b>किसी टेक्स्ट स्ट्रिंग (Text String) के सभी कैरेक्टर (character) को लोअर-केस (Lowercase) में बदलता है।</b></td></tr>
+<tr><td><b>UPPER</b></td><td><b>किसी टेक्स्ट स्ट्रिंग (Text String) के सभी कैरेक्टर (character) को अपर-केस में बदलता है।</b></td></tr>
+<tr><td><b>VLOOKUP</b></td><td><b>तालिका (Table) के पहले कॉलम (Column) के मूल्य (Value) दिखाता है और दूसरी कॉलम में इसी के मान (Value) को देता है (विभिन्न वर्कशीट/वर्कबुक में भी हो सकता है)</b></td></tr>
+<tr><td><b>ROUND</b></td><td><b>दी गई संख्या तक एक नम्बर को पूर्णांक (Round) बनाता है।</b></td></tr>
+<tr><td><b>ROUND DOWN</b></td><td><b>दी गई तक शून्य की ओर नम्बर को पूर्णांक (Round) बनाता है।</b></td></tr>
+<tr><td><b>ROUND UP</b></td><td><b>दी गई तक शून्य से दो नंबर को पूर्णांक (Round) बनाता है।</b></td></tr>
+</table>
+
+<p><b>चार्ट (Charts)</b></p>
+<p><b>माइक्रोसॉफ्ट एक्सेल (MS Excel) में चार्ट (Chart) द्वारा डाटा का चित्रात्मक प्रदर्शन किया जाता है। चार्ट (Chart) की सहायता से आपके श्रोता (Audience) आपकी प्रेजेंटेशन में संख्याओं के पीछे छिपे अर्थ (Meaning) को आसानी से समझ सकते है जिसका अर्थ है तुलना (Comparison) और रुझान (Trend) को दिखाना बहुत आसान हो जाता है।</b></p>
+
+<p><b>चार्ट के मुख्य घटक</b></p>
+<table>
+<tr><th>टर्म (Term)</th><th>अर्थ (Meaning)</th></tr>
+<tr><td><b>चार्ट टाइटल (Chart Title)</b></td><td><b>टाइटल चार्ट के बारे विवरण प्रदर्शित करता है</b></td></tr>
+<tr><td><b>डाटा पॉइंट्स (Data points)</b></td><td><b>हॉरिजॉन्टल बार लाइंस कॉलम और अन्य डाटा मार्कर</b></td></tr>
+<tr><td><b>डाटा सीरीज (Data series)</b></td><td><b>वर्क शीट में कुछ रो या कॉलम से सम्बंधित डाटा पॉइंट को एक साथ डाटा सीरीज में ग्रुप किया जाता है</b></td></tr>
+<tr><td><b>लीजेंड (Legend)</b></td><td><b>चार्ट पर प्रत्येक डाटा सीरीज किस कलर में प्रदर्शित होगी यह लीजेंड द्वारा लिया जाता है जटिल चार्ट्स के लिए एक महत्वपूर्ण घटक तत्व है</b></td></tr>
+<tr><td><b>डाटा लेबल्स (Data Labels)</b></td><td><b>डाटा पॉइंट की वास्तविक वैल्यू डाटा लेबल्स कहलाती है</b></td></tr>
+<tr><td><b>ग्रिडलाइन्स (Gridlines)</b></td><td><b>प्लाट एरिया में दिखाई देने वाली हॉरिजॉन्टल लाइन ग्रिडलाइन्स कहलाती है</b></td></tr>
+</table>
+
+<p><b>चार्ट के प्रकार</b></p>
+<table>
+<tr><th>सैंपल</th><th>चार्ट का प्रकार</th><th>विवरण</th></tr>
+<tr><td></td><td><b>कॉलम (Column)</b></td><td><b>एक कालम चार्ट (Column Chart) में श्रेणियों (Categories) क्षैतिज लाइनों (Horizontal Lines) में दिखाई देती है और उनका मूल्य (Value) बड़ी लाइनों (Vertical Lines) में दिखाई देते है।</b></td></tr>
+<tr><td></td><td><b>बार (Bar)</b></td><td><b>बार चार्ट (Bar Charts) , स्तंभ चार्ट (Column Chart) के समान है सिवाय (Except) इसके कि बार (Bar) को खड़ी (Vertically) के बजाय क्षैतिज (Horizontal) के प्रकार से रिप्रेजेंट (Represented) किया जाता है। एक बार चार्ट (Bar Chart) समय की एक निश्चित (Fixed) अवधि में आइटम (आइटम) के बीच Comparison पर प्रकाश (Emphasizes) डालता है।</b></td></tr>
+<tr><td></td><td><b>पाई (Pie)</b></td><td><b>पाई चार्ट (Pie Chart) मुख्य रूप से योग (Total) करने के लिए प्रत्येक मान (Value) के योगदान (Contribution) को दिखाने के लिए उपयोग में लिया जाता है। पाई चार्ट (Pie Chart) शेयरों (Shares) की तुलना (Comparison) को आसान बनाते हैं। प्रत्येक मूल्य (Each Value) पाई (Pie) के एक टुकड़े (Piece) के रूप में दिखाया गया है। इस प्रकार के चार्ट के लिए सभी Value पॉजिटिव (Positive) होनी चाहिए।</b></td></tr>
+<tr><td></td><td><b>लाइन (Line)</b></td><td><b>एक लाइन चार्ट समय के साथ जहाँ नियमित समय अंतराल क्षैतिज या X अक्ष पर प्लॉट की जाती है, के रुझान दिखाने के लिए आदर्श है।</b></td></tr>
+<tr><td></td><td><b>एरिया (Area)</b></td><td><b>एरिया चार्ट (Area Chart) समय के साथ परिवर्तन (Changes) एवं इन परिवर्तनों (Change) के योग (Summation) दोनों को बताता है। वे चार्ट रेखा (Line) के समान (Similar) है, सिवाय (Except) इसके की लाइनों के नीचे के क्षेत्र (Areas under Below) भरे होते हैं। एरिया चार्ट (Area Chart) समय के साथ वैल्यूज (Values) के सापेक्ष महत्व (Relative Importance) को दर्शाता है</b></td></tr>
+<tr><td></td><td><b>XY स्कैटर (Scatter)</b></td><td><b>XY चार्ट या बिखराव चार्ट (Scatter Chart) डेटा पॉइंट (Data Point) या वेरिएबल (Variable) के दो सेट (Set) के बीच संबंध (Relation) का विश्लेषण (Analyze) करने के लिए इस्तेमाल किये जाते हैं और वे वैल्यूज (Values) की जोड़ी की तुलना (Compair) करते हैं।</b></td></tr>
+<tr><td></td><td><b>स्टॉक (Stock)</b></td><td><b>यह चार्ट अक्सर शेयर कीमतों (Share Prices) का वर्णन (Illustrate) करने के लिए प्रयोग किया जाता है। यह चार्ट वैज्ञानिक डेटा (Scientific data) जैसे तापमान (Temperature) में परिवर्तन (Change) को दर्शाने (Indicate) के लिये भी उपयोग में लिये जाते हैं। यह दो बदलते वेरिएबल (Variable) में उच्च उच्च और निम्न बिंदुओं (High and Low Points) को इंगित (Indicate) करने के लिए इस्तेमाल किया जा सकता है।</b></td></tr>
+<tr><td></td><td><b>सरफेस (Surface)</b></td><td><b>सरफेस चार्ट (Surface Chart) आप एक 3 डी परिदृश्य (3D Landscape) में डेटा प्रदर्शन (Data Display) करने के लिए अनुमति (Permission) देते हैं। वे बड़े डेटा सेट (Large Data Set) के साथ सबसे अच्छा काम करते हैं।</b></td></tr>
+<tr><td></td><td><b>बबल (Bubble)</b></td><td><b>एक बबल चार्ट (Bubble Chart) स्कैटर चार्ट (Scatter Chart) का ही एक प्रकार (Type) है। Bubble के आकार Third Variable के Value इंगित (Indicate) करता है। अपने डेटा को व्यवस्थित (Arrange) करने के लिये X - Values को एक Row या column में रखे और उनके Corresponding Y - Values को एवं Bubble Size को Adjacent (सटे हुए) Rows या Column में</b></td></tr>
+<tr><td></td><td><b>डॉनट (Dough Nut)</b></td><td><b>डोनट चार्ट (Doughnet Chart) पाई चार्ट (Pie Chart) का ही वेरिएशन (Variation) है। पाई चार्ट (Pie Chart) केवल एक ही डेटाब्रुवा (Data Series) के लिए प्रतिबंधित (Restricted) है, लेकिन डोनट चार्ट (Doughnet Chart) में ऐसे कोई भी प्रतिबंध (Restrictions) नहीं है।</b></td></tr>
+<tr><td></td><td><b>राडार (Radar)</b></td><td><b>एक रडार चार्ट (Radar Chart) व्यक्तिगत (Individual) और समूह (Group) के परिणामों (Results) के बीच के रिश्ते (Relation) को दिखाने के लिए प्रयोग किया जाता है। इसका एक विशेष (Special) उपयोग है। एक रडार चार्ट (Radar Chart) में प्रत्येक श्रेणी (Category) अपनी ही धुरी (Axis) के केंद्र बिंदु (Centre Point) में Radiating होती है। डेटा पॉइंट (Data Point) Spoke के बगल में प्लॉट (Plot) किए जाते हैं और समान श्रृंखला (Series) के डेटा बिंदु (Data Points) लाइनों (Lines) के द्वारा जुड़े होते हैं।</b></td></tr>
+</table>
+
+<p><b>एक नया चार्ट बनाना (Creating a New Chart)</b></p>
+<p><b>1. कॉलम और रो हेडिंग को शामिल करते हुए जिन डाटा के लिये चार्ट बनाना है उस डेटा की सेल के रेंज को सेलेक्ट करे। ये सेल, चार्ट के लिये डाटा स्रोत (Data Source) की तरह कार्य करेंगे।</b></p>
+<p><b>2. रिबन पर इन्सर्ट टैब पर क्लिक करें और चार्ट ग्रुप में इच्छित चार्ट श्रेणियों का चयन करें :</b></p>
+<p><b>3. ड्राप डाउन गैलरी से इच्छित चार्ट टाइप (Desired Chart Type) की थंबनेल चयनित करें।</b></p>
 
 </div>
 </body>

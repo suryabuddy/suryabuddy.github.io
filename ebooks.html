@@ -110,20 +110,26 @@
 </div>
 
 </div></div>
-  
-<script>
-function checkC(){
+  <script>
+var currentPDF = "";
+function openPay(file){
+  currentPDF = file;
+  document.getElementById('pay').style.display='block';
+}
+function check(){
   var c=document.getElementById('cp').value.trim().toUpperCase();
   if(c=="SURYA2027"){
     document.getElementById('msg').style.color="green";
     document.getElementById('msg').innerText="Opening...";
-    window.open("Hanuman chalisa.pdf","_blank");
+    window.open(currentPDF,"_blank");
+    document.getElementById('pay').style.display='none';
   } else {
     document.getElementById('msg').style.color="red";
     document.getElementById('msg').innerText="Galat Code! ₹1 Pay Karo";
   }
 }
 </script>
+
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
